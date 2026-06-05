@@ -1,6 +1,6 @@
 function MainUri()
 {
-    return "/mianquantaiji/";
+    return "/";
 }
 
 function UriImg()
@@ -31,7 +31,7 @@ class JsLayout
         this.esMovil = ua || pantalla;
 
         this.CrearContenidoLayout();
-        this.HeadReady = fetch("/mianquantaiji/htmlhead.html")
+        this.HeadReady = fetch("/htmlhead.html")
             .then(r => r.text())
             .then(html => {
                 document.head.insertAdjacentHTML("beforeend", html);
@@ -105,7 +105,7 @@ class JsLayout
 
     InsertaCabecera()
     {
-        $('#cabecera').attr('src', Imagen("cabecera_latigo.png"));
+        $('#cabecera').attr('src', Imagen("cabecera.png"));
     }
 
     ImprimirContenidoFilas(filas)

@@ -5,7 +5,7 @@ function MainUri()
 
 function UriImg()
 {
-    return MainUri() + "/img/";
+    return MainUri() + "img/";
 }
 
 function UriCss()
