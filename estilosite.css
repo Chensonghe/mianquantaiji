@@ -1,0 +1,178 @@
+html 
+{
+     font-size: 16px; /* ahora 1rem = 16px */
+}
+body {
+    background-color: #FFF;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem; /* 1rem = 16px */ 
+                
+  }
+hr{
+  border: 0; 
+  height: 2px; 
+  background: #000; 
+  margin: 20px 0;
+}
+  .card-custom {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px #fff;
+    transition: transform 0.2s;
+    background-color: #fff;
+  }
+  .card-custom:hover {
+    transform: scale(1.02);
+  }
+
+  .header {
+    display: flex;
+    align-items: center;        /* Centra verticalmente imagen y texto */
+    justify-content: center;    /* Centra todo el bloque en la página */
+    gap: 20px;                  /* Espacio entre imagen y texto */
+    text-align: left;           /* El texto queda alineado a la izquierda */
+    color: black;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+  .header {
+    background-color: #fff;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+  }
+  .card-title
+  {
+    color: #000;
+  }
+  .card-text
+  {
+    color: #000;
+  }
+
+
+  .fila {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+max-width: 840px;
+padding: 5px 20px;
+color:#000;
+}
+
+.subfila
+{
+  margin-top: -15px;
+}
+
+.columna {
+flex: 1;
+padding: 20px;
+}
+
+/* Centrar la imagen dentro de su columna */
+.columna.imagen {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.columna.imagen img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+/* --- RESPONSIVE: cuando la pantalla es estrecha --- */
+@media (max-width: 768px) {
+.fila {
+  flex-direction: column;   /* Las columnas pasan a estar una debajo de otra */
+  text-align: center;       /* Opcional: centra el texto */
+}
+
+.columna {
+  width: 100%;              /* Cada columna ocupa toda la fila */
+  padding: 10px 0;
+}
+
+}
+
+.texto
+{
+  text-align: justify;
+}
+
+.imgcolumna {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+
+
+/* Estilos del menú */
+
+.menu {
+  background: #111;
+  font-family: system-ui, sans-serif;
+}
+
+.menu-principal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Centra las opciones */
+}
+
+.menu-principal > li {
+  position: relative;
+}
+
+.menu a {
+  color: #eee;
+  text-decoration: none;
+  padding: 12px 15px;
+  display: block;
+}
+
+.menu a:hover {
+  background: #222;
+}
+
+.submenu-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  display: none;
+  border: 1px solid #222;
+}
+
+.submenu-items li a {
+  padding: 10px 15px;
+}
+
+.submenu:hover .submenu-items {
+  display: block;
+}
+
+h4{
+  color: rgba(32, 33, 34, 0.668);
+}
+
+/* fin estilos del menú*(

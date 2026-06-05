@@ -1,0 +1,24 @@
+.documento 
+{
+    background-image: url("img/fondoarticulo.png");
+    background-repeat: repeat;
+    background-size: cover;
+    
+    background-position: center;
+    color: #000;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.documento h1 { text-align: center; }   
+.documento h2 { color: #000; }
+.documento h3 { text-align: center; }
+.documento .fila .columna .texto
+{
+    color: #000;
+}
+.documento p{
+    color: #000;
+    text-align: justify;
+    font-size: 1.1rem;
+}   
+
