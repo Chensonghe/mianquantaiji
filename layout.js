@@ -116,7 +116,7 @@ class JsLayout
     InsertaCabecera()
     {
         //this.capas["cabecera"].innerHTML = "<h1>Hola mundo</h1>";
-        $('#cabecera').attr('src', Imagen("logo_horizontal_2.png"));
+        $('#cabecera').attr('src', Imagen("logo_horizontal_3.png"));
     }
 
     ImprimirContenidoFilas(filas)
