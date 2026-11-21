@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="p-4 border rounded shadow-sm bg-light">
+                
+                <input type="hidden" name="access_key" value="ec40e11c-2706-47cd-b8fb-acba7b7e6952">
+
+                <h4 class="mb-3 text-center">Contacto</h4>
+
+                <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" name="name" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Mensaje</label>
+                    <textarea name="message" class="form-control" rows="4" required></textarea>
+                </div>
+
+                <!-- Protección anti-spam -->
+                <input type="checkbox" name="botcheck" class="d-none">
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Enviar mensaje
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
