@@ -66,11 +66,29 @@ class JsLayout
     ImprimirPantalla(elementos, cabecera, pie)
     {
         return this.HeadReady.then(() => {
-            // Aquí ImprimirPagina ya existe con total seguridad
+            this.InicializarAnalytics("GTM-5VFGKR99");
             this.ImprimirPagina(elementos, cabecera, pie);
         });
     }
 
+    InicializarAnalytics(id)
+    {
+        if (window.gtag)
+            return;
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function() {
+            window.dataLayer.push(arguments);
+        };
+
+        window.gtag("js", new Date());
+        window.gtag("config", id);
+
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+        document.head.appendChild(script);
+    }
 
     CrearContenidoLayout() {
         this.capas = {};   // Diccionario donde guardaremos las referencias
