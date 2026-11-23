@@ -1,4 +1,9 @@
 <nav class="menu">
+  <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Mostrar u ocultar el menú de navegación">
+  <label class="menu-toggle-label" for="menu-toggle">
+    <span class="menu-toggle-icon" aria-hidden="true"></span>
+    <span class="menu-toggle-text">Menú</span>
+  </label>
   <ul class="menu-principal">
 
     <li>
@@ -8,14 +13,16 @@
       <a href="/articulos/saludytradicion/saludytradicion.html">Salud y tradición</a>
     </li>
 
-    <li class="submenu">
-      <a href="#">Artículos</a>
-      <ul class="submenu-items">
-        <li><a href="/articulos/4caracteristicas/4caracteristicas.html">Las 4 Características</a></li>
-        <li><a href="/articulos/4niveles/4niveles.html">Los 4 niveles</a></li>
-        <li><a href="/articulos/gongfu/gongfudegong.html">Gong Fu / Gong Fa</a></li>
-        <li><a href="/articulos/neijia/neijia.html">Nei Jia / Wei Jia</a></li>
-      </ul>
+    <li>
+      <details class="submenu">
+        <summary>Artículos</summary>
+        <ul class="submenu-items">
+          <li><a href="/articulos/4caracteristicas/4caracteristicas.html">Las 4 Características</a></li>
+          <li><a href="/articulos/4niveles/4niveles.html">Los 4 niveles</a></li>
+          <li><a href="/articulos/gongfu/gongfudegong.html">Gong Fu / Gong Fa</a></li>
+          <li><a href="/articulos/neijia/neijia.html">Nei Jia / Wei Jia</a></li>
+        </ul>
+      </details>
     </li>
 
     <li class="submenu">

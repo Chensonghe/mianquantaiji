@@ -143,7 +143,7 @@ class JsLayout
     InsertaCabecera()
     {
         //this.capas["cabecera"].innerHTML = "<h1>Hola mundo</h1>";
-        $('#cabecera').attr('src', Imagen("logo_yuanhetaiji.jpg"));
+        $('#cabecera').attr('src', Imagen("logo_yuanhetaiji_3.jpg"));
     }
 
     ImprimirContenidoFilas(filas)

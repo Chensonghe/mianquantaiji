@@ -10,7 +10,7 @@ h1,h2,h3{
 body {
     background-color: #FFF;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
                 
   }
@@ -133,6 +133,11 @@ display: block;
   font-family: system-ui, sans-serif;
 }
 
+.menu-toggle,
+.menu-toggle-label {
+  display: none;
+}
+
 nav.menu li {
   font-size: 16px;
 }
@@ -161,6 +166,25 @@ nav.menu li {
   background: #222;
 }
 
+.submenu > summary {
+  color: #eee;
+  cursor: pointer;
+  list-style: none;
+  padding: 12px 15px;
+}
+
+.submenu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.submenu > summary::after {
+  content: " \25BE";
+}
+
+.submenu[open] > .submenu-items {
+  display: block;
+}
+
 .submenu-items {
   list-style: none;
   margin: 0;
@@ -178,8 +202,90 @@ nav.menu li {
   padding: 10px 15px;
 }
 
-.submenu:hover .submenu-items {
-  display: block;
+.submenu > summary:hover,
+.submenu > summary:focus-visible {
+  background: #222;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 8px 12px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+
+  .menu-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #eee;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .menu-toggle:focus-visible + .menu-toggle-label {
+    outline: 2px solid #eee;
+    outline-offset: 2px;
+  }
+
+  .menu-toggle-icon,
+  .menu-toggle-icon::before,
+  .menu-toggle-icon::after {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+  }
+
+  .menu-toggle-icon {
+    position: relative;
+  }
+
+  .menu-toggle-icon::before,
+  .menu-toggle-icon::after {
+    position: absolute;
+    left: 0;
+    content: "";
+  }
+
+  .menu-toggle-icon::before {
+    top: -7px;
+  }
+
+  .menu-toggle-icon::after {
+    top: 7px;
+  }
+
+  .menu-principal {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .menu-toggle:checked ~ .menu-principal {
+    display: flex;
+  }
+
+  .menu-principal > li > a,
+  .submenu > summary {
+    padding: 12px 8px;
+  }
+
+  .submenu-items {
+    position: static;
+    min-width: 0;
+    border: 0;
+    padding-left: 12px;
+  }
 }
 
 h4{
